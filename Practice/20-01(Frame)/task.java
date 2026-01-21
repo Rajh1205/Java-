@@ -8,12 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+
 public class task implements ActionListener
 {
 	JFrame frame;
 	JTextField tf1,tf2,tf3,tf4,tf5;
 	JLabel l1,l2,l3,l4,l5,l6;
 	JButton bt1,bt2,bt3;
+	
 	
 	public task()
 	{
@@ -63,6 +65,11 @@ public class task implements ActionListener
 		bt3= new JButton("Back");
 		bt3.setBounds(75,350,100,50);
 		
+		bt1.addActionListener(this); // Reset
+		bt2.addActionListener(this); // Register
+		bt3.addActionListener(this); // Back
+		
+
 		
 		
 		frame.setSize(800,800);
@@ -89,8 +96,28 @@ public class task implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
-		// TODO Auto-generated method stub
 		
-	}
 
+		 if (e.getSource() == bt1)  // Reset button
+		    {
+		        tf1.setText("");
+		        tf2.setText("");
+		        tf3.setText("");
+		        tf4.setText("");
+		        tf5.setText("");
+		        
+		        tf1.requestFocus(); 
+	 }
+		 if (e.getSource() == bt2)
+		 {
+		     System.out.println("Registered Successfully");
+		 }
+		 
+		 if (e.getSource() == bt3)
+		 {
+		     frame.dispose(); // close current frame
+		 }
+
+
+	}
 }
