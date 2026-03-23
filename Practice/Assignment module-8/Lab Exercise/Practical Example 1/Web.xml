@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="4.0">
+
+    <servlet>
+        <servlet-name>MyInitServlet</servlet-name>
+        <servlet-class>InitParamServlet</servlet-class>
+        
+        <init-param>
+            <param-name>databaseUser</param-name>
+            <param-value>root_admin</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>fileUploadDir</param-name>
+            <param-value>C:/uploads/temp</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyInitServlet</servlet-name>
+        <url-pattern>/showConfig</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,21 @@
+<web-app>
+    <servlet>
+        <servlet-name>MyConfigServlet</servlet-name>
+        <servlet-class>ConfigDemoServlet</servlet-class>
+        
+        <init-param>
+            <param-name>dbURL</param-name>
+            <param-value>jdbc:mysql://localhost:3306/my_database</param-value>
+        </init-param>
+        
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>admin@mysite.com</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyConfigServlet</servlet-name>
+        <url-pattern>/configTest</url-pattern>
+    </servlet-mapping>
+</web-app>

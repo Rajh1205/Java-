@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-classes Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* --- 1. Navigation Menu Styles --- */
+        nav {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease; /* Smooth transition */
+        }
+
+        /* PSEUDO-CLASS: Change color on hover */
+        nav a:hover {
+            color: #ffcc00; /* Turns gold when mouse is over it */
+            text-decoration: underline;
+        }
+
+        /* --- 2. Form Input Styles --- */
+        .form-container {
+            margin-top: 40px;
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            outline: none; /* Removes default browser glow */
+            transition: all 0.3s ease;
+        }
+
+        /* PSEUDO-CLASS: Style inputs when focused (clicked into) */
+        input:focus {
+            border-color: #007bff; /* Turns blue */
+            background-color: #f0f7ff; /* Light blue tint */
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Bonus: Hover effect for the button */
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="form-container">
+        <h3>User Login</h3>
+        <form>
+            <label>Username:</label>
+            <input type="text" placeholder="Click here to see :focus effect">
+            
+            <label>Password:</label>
+            <input type="password" placeholder="The border will change color">
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

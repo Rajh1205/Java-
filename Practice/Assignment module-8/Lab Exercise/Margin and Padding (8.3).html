@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Margin and Padding Demonstration</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            padding: 50px; /* Space around the whole page */
+        }
+
+        .container {
+            background-color: white;
+            border: 2px dashed #999;
+            width: 500px;
+        }
+
+        /* Box 1: Demonstrating Padding */
+        .padding-box {
+            background-color: #ffeb3b; /* Yellow */
+            border: 5px solid #fbc02d;
+            
+            /* PADDING: Space INSIDE the box */
+            padding: 40px; 
+            
+            margin-bottom: 20px;
+        }
+
+        /* Box 2: Demonstrating Margin */
+        .margin-box {
+            background-color: #8bc34a; /* Green */
+            border: 5px solid #689f38;
+            padding: 10px;
+
+            /* MARGIN: Space OUTSIDE the box */
+            margin-top: 50px;
+            margin-left: 100px;
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Layout Demonstration</h1>
+
+    <div class="container">
+        <div class="padding-box">
+            <span class="label">Padding Box:</span><br>
+            I have 40px of padding. Notice how much space there is between this text and my border.
+        </div>
+
+        <div class="margin-box">
+            <span class="label">Margin Box:</span><br>
+            I have a large top and left margin. Notice how I am pushed away from the yellow box and the left edge.
+        </div>
+    </div>
+
+</body>
+</html>
